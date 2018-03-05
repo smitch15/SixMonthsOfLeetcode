@@ -1,3 +1,7 @@
+# Steven Mitchell
+# 185DaysOfCode 
+# Problem 1 - 3/1/18
+
 ### Reverse a singly linked list
 
 # Definition for singly-linked list.
