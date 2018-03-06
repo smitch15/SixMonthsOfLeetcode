@@ -16,23 +16,23 @@ Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807
 """
 
+"""
+Definition for singly-linked list.
+class ListNode:
+	def __init__(self, x):
+		self.val = x
+		self.next = None
 
-# Definition for singly-linked list.
-# class ListNode:
-# 	def __init__(self, x):
-# 		self.val = x
-# 		self.next = None
-#
-# 	def __str__(self):
-# 		count = 0
-# 		outStr = ""
-# 		while (self.next != None):
-# 			outStr += "node: " + str(count) + ", val: " + str(self.val)+'\n'
-# 			self = self.next
-# 			count += 1
-# 		outStr += "node: " + str(count) + ", val: " + str(self.val)+'\n'
-# 		return outStr
-
+	def __str__(self):
+		count = 0
+		outStr = ""
+		while (self.next != None):
+			outStr += "node: " + str(count) + ", val: " + str(self.val)+'\n'
+			self = self.next
+			count += 1
+		outStr += "node: " + str(count) + ", val: " + str(self.val)+'\n'
+		return outStr
+"""
 
 
 class Solution:
@@ -85,14 +85,15 @@ class Solution:
                 head1.next = ListNode(1)
             return l1
 
-# def main():
-# 	s1 = Solution()
-# 	# add 99 and 1 == 100
-# 	l1 = ListNode(1)
-# 	l2 = ListNode(9)
-# 	l3 = ListNode(9)
-# 	l2.next = l3
-# 	print(s1.addTwoNumbers(l1, l2))
-#
-#
-# main()
+"""
+def main():
+	s1 = Solution()
+	# add 99 and 1 == 100
+	l1 = ListNode(1)
+	l2 = ListNode(9)
+	l3 = ListNode(9)
+	l2.next = l3
+	print(s1.addTwoNumbers(l1, l2))
+"""
+
+#	main()
