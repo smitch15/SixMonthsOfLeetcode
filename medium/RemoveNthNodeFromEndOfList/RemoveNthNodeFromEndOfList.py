@@ -17,6 +17,37 @@ Try to do this in one pass.
 #         self.val = x
 #         self.next = None
 
+
+class Solution:
+    def removeNthFromEnd(self, head, n):
+        """
+        :type head: ListNode
+        :type n: int
+        :rtype: ListNode
+        """
+        first = head
+        nth = first
+        if (head == None or head.next == None):
+            return None
+        newN = n+1
+        while (first.next):
+            while(newN>0):
+                if (nth == None):
+                    return head.next
+                nth = nth.next
+                newN -= 1
+            if (nth == None):
+                first.next = first.next.next
+                return head
+            first = first.next
+            newN = n+1
+            nth = first
+
+
+"""
+#This version, i tried to do it in O(n) - all cases
+#I'd like to revisit it when i have some time
+#but my other solution works and makes more sense to me right now
 class Solution:
     def removeNthFromEnd(self, head, n):
         """
@@ -48,4 +79,4 @@ class Solution:
         
         nth.next = last
         return head
-
+"""
