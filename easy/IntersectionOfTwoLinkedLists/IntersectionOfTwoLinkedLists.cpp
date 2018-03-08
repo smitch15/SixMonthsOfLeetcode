@@ -29,6 +29,8 @@ Your code should preferably run in O(n) time and use only O(1) memory.
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
+
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
