@@ -30,7 +30,32 @@ Your code should preferably run in O(n) time and use only O(1) memory.
  * };
  */
 
+// Time Complexity: O(n)
+// real clever solution: if you add the lengths of both lists
+// they will traverse the same distance until right before the 
+// intersection. A.length = a + c; B.length = b + c; --> a+c+b == b+c+a
+// A.length == B.length --> both traverse a+c+b nodes, next node is the
+// start of the intersection
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode *pa = headA;
+        ListNode *pb = headB;
+        if (headA == nullptr || headB == nullptr)   return nullptr;
+        while(pa!=nullptr || pb!= nullptr){
+            if (pa ==nullptr)    pa = headB;
+            if (pb == nullptr)   pb = headA;
+            if (pa == pb)   return pa;
+            pa = pa->next;
+            pb = pb->next;
+        }
+        return nullptr;
+    }
+};
+        
 
+// Time Complexity: O(n^2)
+/**
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
@@ -48,3 +73,4 @@ public:
         return nullptr;
     }
 };
+**/
